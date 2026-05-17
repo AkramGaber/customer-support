@@ -1,0 +1,73 @@
+:root {
+  --green: #00e5a0;
+  --green-dim: rgba(0, 229, 160, 0.12);
+  --green-glow: rgba(0, 229, 160, 0.25);
+  --bg: #0a0a0f;
+  --surface: #111118;
+  --surface2: #18181f;
+  --border: rgba(255, 255, 255, 0.07);
+  --border-strong: rgba(255, 255, 255, 0.12);
+  --text: #f0f0f5;
+  --text-muted: rgba(240, 240, 245, 0.45);
+  --text-dim: rgba(240, 240, 245, 0.28);
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+}
+
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 229, 160, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 160, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.chat-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 680px;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+  max-height: 90vh;
+  box-shadow: 0 0 60px rgba(0, 229, 160, 0.05), 0 40px 80px rgba(0, 0, 0, 0.6);
+}
+
+.error-bar {
+  background: rgba(255, 60, 60, 0.1);
+  border-bottom: 1px solid rgba(255, 60, 60, 0.2);
+  color: #ff6b6b;
+  font-size: 12px;
+  padding: 10px 24px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 500px) {
+  .app { padding: 0; }
+  .chat-container {
+    border-radius: 0;
+    max-height: 100vh;
+    min-height: 100vh;
+  }
+}
