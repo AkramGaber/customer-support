@@ -1,4 +1,5 @@
 # ShopEase Support — Vite + React
+live-demo: [https://customer-support-n.netlify.app/]
 
 AI-powered customer support chat, connected to your n8n workflow.
 
@@ -22,6 +23,9 @@ shopease-support/
         ├── ChatInput.jsx / .css
         └── ConfigPanel.jsx / .css
 ```
+
+## This is our n8n workflow:
+<img width="1375" height="484" alt="image" src="https://github.com/user-attachments/assets/7c2b1098-4671-4e77-8877-6d6ad7f56a68" />
 
 ## Setup & Run Locally
 
@@ -76,3 +80,6 @@ In n8n → Settings → **Allowed Origins (CORS)** → set to `*`
 
 > Note: Vite uses `VITE_` prefix for env variables (not `REACT_APP_`).
 > Access them in code with `import.meta.env.VITE_N8N_WEBHOOK_URL`
+
+
+
